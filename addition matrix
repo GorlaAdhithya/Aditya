@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+// Function to add two matrices
+void addMatrices(int matrixA[3][3], int matrixB[3][3], int result[3][3]) {
+    int i, j;
+    // Perform addition of corresponding elements
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            result[i][j] = matrixA[i][j] + matrixB[i][j];
+        }
+    }
+}
+
+// Function to display a matrix
+void displayMatrix(int matrix[3][3]) {
+    int i, j;
+    // Print matrix elements
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    // Declare two matrices and the result matrix
+    int matrixA[3][3], matrixB[3][3], result[3][3];
+    int i, j;
+
+    // Input elements for the first matrix
+    printf("Enter elements of matrix 1 (3x3):\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Enter element at [%d][%d]: ", i, j);
+            scanf("%d", &matrixA[i][j]);
+        }
+    }
+
+    // Input elements for the second matrix
+    printf("Enter elements of matrix 2 (3x3):\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Enter element at [%d][%d]: ", i, j);
+            scanf("%d", &matrixB[i][j]);
+        }
+    }
+
+    // Add the matrices
+    addMatrices(matrixA, matrixB, result);
+
+    // Display the result of the matrix addition
+    printf("\nSum of matrix 1 and matrix 2 is:\n");
+    displayMatrix(result);
+
+    return 0;
+}
