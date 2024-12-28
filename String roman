@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+
+int romanToDecimal(char *str) {
+    int res = 0;
+
+    for (int i = 0; str[i]; i++) {
+        int s1 = value(str[i]);
+
+        if (str[i + 1] && value(str[i + 1]) > s1) {
+            res -= s1;
+        } else {
+            res += s1;
+        }
+    }
+
+    return res;
+}
+
+int value(char r) {
+    if (r == 'I')
+        return 1;
+    if (r == 'V')
+        return 5;
+    if (r == 'X')
+        return 10;
+    if (r == 'L')
+        return 50;
+
+    return -1;
+}
+
+int main() {
+    char str[15];
+    printf("Enter Roman Numeral: ");
+    scanf("%s", str);
+
+    printf("Decimal equivalent of %s is %d\n", str, romanToDecimal(str));
+
+    return 0;
+}
