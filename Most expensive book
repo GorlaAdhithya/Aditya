@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+struct Book {
+    char title[50];
+    char author[50];
+    float price;
+};
+int main() {
+    struct Book books[3], most_expensive, lowest_priced;
+    for (int i = 0; i < 3; i++) {
+        printf("Enter details for book %d:\n", i + 1);
+        printf("Title: ");
+        scanf("%s", &books[i].title);
+        printf("Author: ");
+        scanf("%s", &books[i].author);
+        printf("Price: ");
+        scanf("%f", &books[i].price);
+    }
+    most_expensive = books[0];
+    for (int i = 1; i < 3; i++) {
+        if (books[i].price > most_expensive.price) {
+            most_expensive = books[i];
+        }
+    }
+    lowest_priced = books[0];
+    for (int i = 1; i < 3; i++) {
+        if (books[i].price < lowest_priced.price) {
+            lowest_priced = books[i];
+        }
+    }
+printf("\nMost Expensive Book:\n");
+    printf("Title: %s\n", most_expensive.title);
+    printf("Author: %s\n", most_expensive.author);
+    printf("Price: %.2f\n", most_expensive.price);
+    printf("\nLowest Priced Book:\n");
+    printf("Title: %s\n", lowest_priced.title);
+    printf("Author: %s\n", lowest_priced.author);
+    printf("Price: %.2f\n", lowest_priced.price);
+    return 0;
+}
