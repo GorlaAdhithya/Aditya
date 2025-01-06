@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int limit, number, sum_of_cubes = 0;
+    printf("Enter the limit: ");
+    scanf("%d", &limit);
+    number = 2;
+    while (number <= limit) {
+        sum_of_cubes += number * number * number;
+        number += 2;
+    }
+    printf("The sum of cubes of even numbers up to %d is: %d\n", limit, sum_of_cubes);
+    return 0;
+}
