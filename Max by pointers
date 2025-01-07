@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main (){
+	int a,b,*ptr1,*ptr2,sum;
+	printf("enter value of a:");
+	scanf("%d",&a);
+	printf("enter value of b:");
+	scanf("%d",&b);
+	ptr1= &a;
+	ptr2= &b;
+	if(*ptr1>*ptr2){
+		printf("the max is %d",*ptr1);
+	}
+	else {
+		printf("the max is %d",*ptr2);
+	}
+	return 0;
+}
