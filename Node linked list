@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct node {
+	int data;
+	struct node*next;
+}Node;
+int main(){
+	node*first=(node*)malloc(sizeof(node));
+	first->data=10;
+	node*second=(node*)malloc(sizeof(node));
+	second->data=20;
+	node*third=(node*)malloc(sizeof(node));
+	third->data=30;
+	first->next=second;
+	second->next=third;
+	third->next=NULL;
+	printf("linked list :");
+	node*temp=first;
+	while(temp){
+		printf("%d ",temp->data);
+		temp=temp->next;
+	}
+	return 0;
+}
