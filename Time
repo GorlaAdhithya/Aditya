@@ -24,7 +24,7 @@ struct T addTimes(struct T t1, struct T t2) {
     sum.minutes %= 60;
  return sum;
 }
-void displayTime(struct T time) {
+int displayTime(struct T time) {
     printf("Time: %02d:%02d:%02d\n", time.hours, time.minutes, time.seconds);
 }
 int main() {
