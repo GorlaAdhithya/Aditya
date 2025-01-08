@@ -2,7 +2,7 @@
 int main (){
 	int P,T,R,SI;
 	printf("enter the principal,rate of interest and time ");
-	scanf("%d %d %d",&P,&T,&R);
+	scanf("%d %d %d",&P,&R,&T);
 	SI=P*T*R/100;
 	printf("the simple intrest is %d",SI);
 	return 0;
