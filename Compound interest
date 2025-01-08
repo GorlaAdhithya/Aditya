@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<math.h>
+int main (){
+	int P,T,R,N,CI;
+	printf("enter the principal,rate of interest,time and no of years ");
+	scanf("%d %d %d %d",&P,&R,&T,&N);
+	CI=P*pow(1+(R/N),N*T);
+	printf("the simple intrest is %d",CI);
+	return 0;
+}
