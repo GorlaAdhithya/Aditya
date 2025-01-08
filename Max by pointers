@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main (){
-	int a,b,*ptr1,*ptr2,sum;
+	int a,b,*ptr1,*ptr2;
 	printf("enter value of a:");
 	scanf("%d",&a);
 	printf("enter value of b:");
