@@ -1,0 +1,41 @@
+#include <stdio.h>
+struct T {
+    int hours;
+    int minutes;
+    int seconds;
+};
+
+struct T readTime() {
+    struct T time;
+   printf("Enter hours: ");
+    scanf("%d", &time.hours);
+    printf("Enter minutes: ");
+    scanf("%d", &time.minutes);
+    printf("Enter seconds: ");
+    scanf("%d", &time.seconds);
+   return time;
+}
+struct T addTimes(struct T t1, struct T t2) {
+    struct T sum;
+    sum.seconds = t1.seconds + t2.seconds;
+    sum.minutes = t1.minutes + t2.minutes + sum.seconds / 60;
+    sum.seconds %= 60;
+    sum.hours = t1.hours + t2.hours + sum.minutes / 60;
+    sum.minutes %= 60;
+ return sum;
+}
+void displayTime(struct T time) {
+    printf("Time: %02d:%02d:%02d\n", time.hours, time.minutes, time.seconds);
+}
+int main() {
+    struct T t1, t2, sum;
+ printf("Enter first time:\n");
+    t1 = readTime();
+ printf("Enter second time:\n");
+    t2 = readTime();
+ sum = addTimes(t1, t2);
+printf("Sum of times:\n");
+    displayTime(sum);
+
+    return 0;
+}
