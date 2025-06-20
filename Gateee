@@ -1,0 +1,82 @@
+def AND_gate(a, b): 
+
+if a == 1 and b == 1: 
+
+return 1 
+
+else: 
+
+return 0 
+
+# OR gate 
+
+def OR_gate(a, b): 
+
+if a == 1 or b == 1: 
+
+return 1 
+
+else: 
+
+return 0 
+
+# NOT gate 
+
+def NOT_gate(a): 
+
+if a == 1: 
+
+return 0 
+
+else: 
+
+return 1
+# XOR gate 
+
+def XOR_gate(a, b): 
+
+if a != b: 
+
+return 1 
+
+else: 
+
+return 0 
+
+# Testing the implementation 
+
+print("AND Gate") 
+
+print(AND_gate(0, 0)) 
+
+print(AND_gate(0, 1)) 
+
+print(AND_gate(1, 0)) 
+
+print(AND_gate(1, 1)) 
+
+print("OR Gate") 
+
+print(OR_gate(0, 0)) 
+
+print(OR_gate(0, 1)) 
+
+print(OR_gate(1, 0)) 
+
+print(OR_gate(1, 1)) 
+
+print("NOT Gate") 
+
+print(NOT_gate(0)) 
+
+print(NOT_gate(1)) 
+
+print("XOR Gate") 
+
+print(XOR_gate(0, 0)) 
+
+print(XOR_gate(0, 1)) 
+
+print(XOR_gate(1, 0)) 
+
+print(XOR_gate(1, 1))
